@@ -12,12 +12,16 @@
 <meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23007aff'/%3E%3Cpath d='M36 12L18 36h13l-3 16 18-24H33z' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap">
 <style>
   /* Layout: phone-first single column, all scoped under .cl so it can drop into a Squarespace code block.
      Look: iPhone Settings. Grouped gray background, white rounded cards without outlines, Apple's system font, iOS system blue for actions, iOS green / orange / red only where they carry meaning.
      No JavaScript: the iPhone/Mac switch and the step check-offs are CSS only. */
   :root {
     --cl-bg: #f2f2f7;
+    --cl-seg-on: #ffffff;
     --cl-surface: #ffffff;
     --cl-card: #f9f9fb;
     --cl-ink: #000000;
@@ -39,52 +43,50 @@
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --cl-bg: #000000;
+      --cl-bg: #0a0a0b;
       --cl-surface: #1c1c1e;
-      --cl-card: #2c2c2e;
-      --cl-ink: #ffffff;
-      --cl-muted: #98989f;
-      --cl-rule: #38383a;
-      --cl-hair: #48484a;
+      --cl-card: #242426;
+      --cl-ink: #f5f5f7;
+      --cl-muted: #a1a1a6;
+      --cl-rule: rgba(255, 255, 255, 0.07);
+      --cl-hair: rgba(255, 255, 255, 0.1);
       --cl-soft: #2c2c2e;
+      --cl-seg-on: #5a5a5e;
       --cl-accent: #0a84ff;
-      --cl-accent-soft: #0b2a4a;
-      --cl-accent-ink: #409cff;
-    --cl-ramp1: #0b2240;  --cl-ramp1-fg: #409cff;
-    --cl-ramp2: #0d3a6e;  --cl-ramp2-fg: #8cc0ff;
-    --cl-ramp3: #0f5fbf;  --cl-ramp3-fg: #ffffff;
-    --cl-ramp4: #0a84ff;  --cl-ramp4-fg: #ffffff;
-      --cl-ramp1: #0b2240;  --cl-ramp1-fg: #409cff;
-      --cl-ramp2: #0d3a6e;  --cl-ramp2-fg: #8cc0ff;
-      --cl-ramp3: #0f5fbf;  --cl-ramp3-fg: #ffffff;
+      --cl-accent-soft: rgba(10, 132, 255, 0.16);
+      --cl-accent-ink: #5aa9ff;
+      --cl-ramp1: #13243b;  --cl-ramp1-fg: #5aa9ff;
+      --cl-ramp2: #15386a;  --cl-ramp2-fg: #a6ceff;
+      --cl-ramp3: #1663c7;  --cl-ramp3-fg: #ffffff;
       --cl-ramp4: #0a84ff;  --cl-ramp4-fg: #ffffff;
       --cl-on-accent: #ffffff;
-      --cl-ok: #2e9e57;
-      --cl-warn: #c98a1f;
-      --cl-bad: #d1453b;
+      --cl-ok: #30a46c;
+      --cl-warn: #d69e2e;
+      --cl-bad: #e5534b;
       color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
-    --cl-bg: #000000;
+    --cl-bg: #0a0a0b;
     --cl-surface: #1c1c1e;
-    --cl-card: #2c2c2e;
-    --cl-ink: #ffffff;
-    --cl-muted: #98989f;
-    --cl-rule: #38383a;
-    --cl-hair: #48484a;
+    --cl-card: #242426;
+    --cl-ink: #f5f5f7;
+    --cl-muted: #a1a1a6;
+    --cl-rule: rgba(255, 255, 255, 0.07);
+    --cl-hair: rgba(255, 255, 255, 0.1);
     --cl-soft: #2c2c2e;
+    --cl-seg-on: #5a5a5e;
     --cl-accent: #0a84ff;
-    --cl-accent-soft: #0b2a4a;
-    --cl-accent-ink: #409cff;
-    --cl-ramp1: #0b2240;  --cl-ramp1-fg: #409cff;
-    --cl-ramp2: #0d3a6e;  --cl-ramp2-fg: #8cc0ff;
-    --cl-ramp3: #0f5fbf;  --cl-ramp3-fg: #ffffff;
+    --cl-accent-soft: rgba(10, 132, 255, 0.16);
+    --cl-accent-ink: #5aa9ff;
+    --cl-ramp1: #13243b;  --cl-ramp1-fg: #5aa9ff;
+    --cl-ramp2: #15386a;  --cl-ramp2-fg: #a6ceff;
+    --cl-ramp3: #1663c7;  --cl-ramp3-fg: #ffffff;
     --cl-ramp4: #0a84ff;  --cl-ramp4-fg: #ffffff;
     --cl-on-accent: #ffffff;
-    --cl-ok: #2e9e57;
-    --cl-warn: #c98a1f;
-    --cl-bad: #d1453b;
+    --cl-ok: #30a46c;
+    --cl-warn: #d69e2e;
+    --cl-bad: #e5534b;
     color-scheme: dark;
   }
   body { background: var(--cl-bg); color: var(--cl-ink); }
@@ -210,7 +212,7 @@
   .cl .cl-seg { display: inline-flex; background: var(--cl-soft); border-radius: 9px; padding: 2px; gap: 2px; }
   .cl .cl-seg input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
   .cl .cl-seg label { font-size: 0.88rem; font-weight: 600; color: var(--cl-ink); padding: 0.35rem 1.15rem; border-radius: 7px; cursor: pointer; }
-  .cl .cl-seg input:checked + label { background: var(--cl-surface); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 0 0 0.5px rgba(0, 0, 0, 0.04); }
+  .cl .cl-seg input:checked + label { background: var(--cl-seg-on); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 0 0 0.5px rgba(0, 0, 0, 0.04); }
   .cl .cl-seg input:not(:checked) + label { color: var(--cl-muted); }
   .cl .cl-seg input:focus-visible + label { outline: 3px solid var(--cl-accent); outline-offset: 2px; }
   .cl:has(#cl-mac:checked) .cl-ios,
@@ -453,11 +455,10 @@
     justify-content: space-between;
     gap: 0.25rem 1rem;
     flex-wrap: wrap;
-    font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    font-family: "Courier Prime", "American Typewriter", "Courier New", Courier, monospace;
+    font-size: 0.92rem;
+    font-weight: 400;
+    letter-spacing: 0;
     color: var(--cl-muted);
     margin-bottom: 0.15rem;
   }
