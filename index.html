@@ -10,7 +10,7 @@
 <meta property="og:description" content="Capture and track social media leads in one click, right from a creator’s profile, on iPhone or Mac.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#232120" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#33302e" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23007aff'/%3E%3Cpath d='M36 12L18 36h13l-3 16 18-24H33z' fill='white'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,22 +45,22 @@
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --cl-bg: #232120;
-      --cl-surface: #2d2b29;
-      --cl-card: #363331;
+      --cl-bg: #33302e;
+      --cl-surface: #3d3a37;
+      --cl-card: #46423f;
       --cl-ink: #f3f0ec;
-      --cl-muted: #aaa49f;
+      --cl-muted: #bdb7b1;
       --cl-rule: rgba(255, 255, 255, 0.08);
-      --cl-hair: rgba(255, 255, 255, 0.1);
-      --cl-soft: #3b3836;
-      --cl-seg-on: #5d5956;
+      --cl-hair: rgba(255, 255, 255, 0.13);
+      --cl-soft: #4b4744;
+      --cl-seg-on: #67625e;
       --cl-accent: #4a78b5;
       --cl-accent-soft: rgba(122, 156, 204, 0.16);
       --cl-accent-ink: #a3bfe4;
       --cl-accent-line: rgba(163, 191, 228, 0.4);
-      --cl-ramp1: #3a3a3d;  --cl-ramp1-fg: #a3bfe4;
-      --cl-ramp2: #3c4757;  --cl-ramp2-fg: #c6d6ec;
-      --cl-ramp3: #4b6688;  --cl-ramp3-fg: #ffffff;
+      --cl-ramp1: #48474c;  --cl-ramp1-fg: #a3bfe4;
+      --cl-ramp2: #44526a;  --cl-ramp2-fg: #c6d6ec;
+      --cl-ramp3: #4e6b92;  --cl-ramp3-fg: #ffffff;
       --cl-ramp4: #4a78b5;  --cl-ramp4-fg: #ffffff;
       --cl-eyebrow: #4a78b5;
       --cl-on-accent: #ffffff;
@@ -71,22 +71,22 @@
     }
   }
   :root[data-theme="dark"] {
-    --cl-bg: #232120;
-    --cl-surface: #2d2b29;
-    --cl-card: #363331;
+    --cl-bg: #33302e;
+    --cl-surface: #3d3a37;
+    --cl-card: #46423f;
     --cl-ink: #f3f0ec;
-    --cl-muted: #aaa49f;
+    --cl-muted: #bdb7b1;
     --cl-rule: rgba(255, 255, 255, 0.08);
-    --cl-hair: rgba(255, 255, 255, 0.1);
-    --cl-soft: #3b3836;
-    --cl-seg-on: #5d5956;
+    --cl-hair: rgba(255, 255, 255, 0.13);
+    --cl-soft: #4b4744;
+    --cl-seg-on: #67625e;
     --cl-accent: #4a78b5;
     --cl-accent-soft: rgba(122, 156, 204, 0.16);
     --cl-accent-ink: #a3bfe4;
     --cl-accent-line: rgba(163, 191, 228, 0.4);
-    --cl-ramp1: #3a3a3d;  --cl-ramp1-fg: #a3bfe4;
-    --cl-ramp2: #3c4757;  --cl-ramp2-fg: #c6d6ec;
-    --cl-ramp3: #4b6688;  --cl-ramp3-fg: #ffffff;
+    --cl-ramp1: #48474c;  --cl-ramp1-fg: #a3bfe4;
+    --cl-ramp2: #44526a;  --cl-ramp2-fg: #c6d6ec;
+    --cl-ramp3: #4e6b92;  --cl-ramp3-fg: #ffffff;
     --cl-ramp4: #4a78b5;  --cl-ramp4-fg: #ffffff;
     --cl-eyebrow: #4a78b5;
     --cl-on-accent: #ffffff;
@@ -130,20 +130,6 @@
   .cl .cl-intro { font-size: 1.08rem; line-height: 1.45; color: var(--cl-muted); }
   .cl .cl-pf { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-top: 0.25rem; }
   @media (max-width: 600px) { .cl .cl-pf { grid-template-columns: 1fr; gap: 0.75rem; } }
-  .cl .cl-pill-row { display: flex; justify-content: center; margin-top: 0.15rem; }
-  .cl .cl-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--cl-accent-ink);
-    background: var(--cl-accent-soft);
-    border: 1px solid var(--cl-accent-line);
-    border-radius: 999px;
-    padding: 0.45rem 1rem 0.45rem 0.8rem;
-  }
-  .cl .cl-pill svg { width: 1.15rem; height: 1.15rem; flex: none; }
   .cl .cl-pf-card {
     background: var(--cl-surface);
     border: 1.5px solid var(--cl-accent-line);
@@ -195,6 +181,26 @@
   .cl .cl-ico svg { width: 1.35rem; height: 1.35rem; }
   .cl .cl-flow strong { font-size: 0.9rem; line-height: 1.25; }
   .cl .cl-flow .cl-d { font-size: 0.8rem; color: var(--cl-muted); line-height: 1.35; }
+  /* Apps and devices: one quiet line under the timeline, with room above it so it reads as a footnote to the flow */
+  .cl .cl-works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.45rem 1.1rem;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.35;
+    color: var(--cl-muted);
+  }
+  .cl .cl-works-i { display: inline-flex; align-items: center; gap: 0.45rem; }
+  .cl .cl-works svg { width: 1.15rem; height: 1.15rem; flex: none; color: var(--cl-accent-ink); }
+  .cl .cl-works-sep { width: 1px; height: 1.15rem; background: var(--cl-hair); }
+  .cl .cl-vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+  @media (max-width: 600px) {
+    .cl .cl-works { flex-direction: column; align-items: flex-start; gap: 0.5rem; margin-top: 1.25rem; padding-left: 0.85rem; }
+    .cl .cl-works-sep { display: none; }
+  }
   @media (max-width: 600px) {
     .cl .cl-flow { grid-template-columns: 1fr; gap: 0.85rem; }
     .cl .cl-flow::before { top: 1.4rem; bottom: 1.4rem; left: 1.4rem; right: auto; border-top: 0; border-left: 1.5px dashed var(--cl-hair); }
@@ -515,12 +521,11 @@
       <div class="cl-pf-card cl-pf-problem"><span class="cl-pf-k">The problem</span><p>Ever spot someone on social media you want to reach out to, but turning their profile into a lead feels like too much work?</p></div>
       <div class="cl-pf-card cl-pf-fix"><span class="cl-pf-k">The fix</span><p>The Creator Lead Generator Shortcut <strong>captures leads in one click.</strong> Go from their profile to a Google Sheet as you browse.</p></div>
     </div>
-    <div class="cl-pill-row"><span class="cl-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="12.5" height="8.5" rx="1.5" fill="none"/><path d="M1 16.5h15.5" fill="none"/><rect x="17" y="7.5" width="6" height="11.5" rx="1.6" fill="none"/><path d="M19.3 16.6h1.4" fill="none"/></svg>Works across platforms on iPhone and Mac</span></div>
     <ol class="cl-flow">
       <li>
         <span class="cl-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4" fill="none"/><path d="M4 20c1.5-4 4.4-6 8-6s6.5 2 8 6" fill="none"/></svg></span>
         <strong>Open a profile</strong>
-        <span class="cl-d">Instagram, TikTok, YouTube, Threads, or X</span>
+        <span class="cl-d">A creator’s main profile page</span>
       </li>
       <li>
         <span class="cl-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2.5L5 13.5h6l-1 8 8-11h-6z" fill="none"/></svg></span>
@@ -538,6 +543,7 @@
         <span class="cl-d">A new row in your lead tracker</span>
       </li>
     </ol>
+    <p class="cl-works"><span class="cl-works-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3.5L7.5 20.5M16.5 3.5l-2 17M4.5 8.5h16M3.5 15.5h16" fill="none"/></svg><span class="cl-vh">Works with </span>Instagram, TikTok, YouTube, Threads, X</span><span class="cl-works-sep" aria-hidden="true"></span><span class="cl-works-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="12.5" height="8.5" rx="1.5" fill="none"/><path d="M1 16.5h15.5" fill="none"/><rect x="17" y="7.5" width="6" height="11.5" rx="1.6" fill="none"/><path d="M19.3 16.6h1.4" fill="none"/></svg><span class="cl-vh">on </span>iPhone and Mac</span></p>
   </header>
 
   <!-- ===== You'll need ===== -->
