@@ -21,6 +21,7 @@
      No JavaScript: the iPhone/Mac switch and the step check-offs are CSS only. */
   :root {
     --cl-bg: #f2f2f7;
+    --cl-accent-line: #b9d6ff;
     --cl-eyebrow: #6c6c70;
     --cl-seg-on: #ffffff;
     --cl-surface: #ffffff;
@@ -56,6 +57,7 @@
       --cl-accent: #4a78b5;
       --cl-accent-soft: rgba(122, 156, 204, 0.16);
       --cl-accent-ink: #a3bfe4;
+      --cl-accent-line: rgba(163, 191, 228, 0.4);
       --cl-ramp1: #3a3a3d;  --cl-ramp1-fg: #a3bfe4;
       --cl-ramp2: #3c4757;  --cl-ramp2-fg: #c6d6ec;
       --cl-ramp3: #4b6688;  --cl-ramp3-fg: #ffffff;
@@ -81,6 +83,7 @@
     --cl-accent: #4a78b5;
     --cl-accent-soft: rgba(122, 156, 204, 0.16);
     --cl-accent-ink: #a3bfe4;
+    --cl-accent-line: rgba(163, 191, 228, 0.4);
     --cl-ramp1: #3a3a3d;  --cl-ramp1-fg: #a3bfe4;
     --cl-ramp2: #3c4757;  --cl-ramp2-fg: #c6d6ec;
     --cl-ramp3: #4b6688;  --cl-ramp3-fg: #ffffff;
@@ -125,8 +128,23 @@
   .cl h2 { font-size: 1.3rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.015em; text-wrap: balance; }
   .cl h3 { font-size: 1rem; font-weight: 600; line-height: 1.3; }
   .cl .cl-intro { font-size: 1.08rem; line-height: 1.45; color: var(--cl-muted); }
-  .cl .cl-intro-group { display: grid; gap: 0.75rem; }
-  .cl .cl-intro em { font-style: normal; color: var(--cl-ink); font-weight: 650; }
+  .cl .cl-pf { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; margin-top: 0.25rem; }
+  .cl .cl-pf-card {
+    background: var(--cl-surface);
+    border: 1.5px solid var(--cl-accent-line);
+    border-radius: 16px;
+    padding: 1rem 1.1rem 1.05rem;
+    display: grid;
+    gap: 0.4rem;
+    align-content: start;
+    min-width: 0;
+  }
+  .cl .cl-pf-fix { border-color: var(--cl-accent); }
+  .cl .cl-pf-k { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--cl-muted); }
+  .cl .cl-pf-fix .cl-pf-k { color: var(--cl-accent-ink); }
+  .cl .cl-pf-card p { font-size: 1rem; line-height: 1.45; color: var(--cl-ink); }
+  .cl .cl-pf-card strong { font-weight: 700; }
+  @media (max-width: 600px) { .cl .cl-pf { grid-template-columns: 1fr; } }
 
   /* ---------- Hero flow ---------- */
   .cl .cl-flow {
@@ -479,10 +497,9 @@
   <header>
     <div class="cl-eyebrow"><span>Francis Roberts</span><span>1 Click Lead Generator</span></div>
     <h1>1 Click Social Media Leads</h1>
-    <div class="cl-intro-group">
-      <p class="cl-intro">Ever spot someone on social media you want to reach out to, but turning their profile into a lead feels like too much work?</p>
-      <p class="cl-intro">The Creator Lead Generator Shortcut <em>captures leads in one click.</em> Go from their profile to a Google Sheet as you browse.</p>
-      <p class="cl-intro">Works on Instagram, TikTok, YouTube, Threads, or X on iPhone and Mac.</p>
+    <div class="cl-pf">
+      <div class="cl-pf-card cl-pf-problem"><span class="cl-pf-k">The problem</span><p>Ever spot someone on social media you want to reach out to, but turning their profile into a lead feels like too much work?</p></div>
+      <div class="cl-pf-card cl-pf-fix"><span class="cl-pf-k">The fix</span><p>The Creator Lead Generator Shortcut <strong>captures leads in one click.</strong> Go from their profile to a Google Sheet as you browse. Works on Instagram, TikTok, YouTube, Threads, or X on iPhone and Mac.</p></div>
     </div>
     <ol class="cl-flow">
       <li>
