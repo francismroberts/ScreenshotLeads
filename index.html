@@ -128,7 +128,22 @@
   .cl h2 { font-size: 1.3rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.015em; text-wrap: balance; }
   .cl h3 { font-size: 1rem; font-weight: 600; line-height: 1.3; }
   .cl .cl-intro { font-size: 1.08rem; line-height: 1.45; color: var(--cl-muted); }
-  .cl .cl-pf { display: grid; grid-template-columns: 1fr; gap: 0.6rem; margin-top: 0.25rem; }
+  .cl .cl-pf { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-top: 0.25rem; }
+  @media (max-width: 600px) { .cl .cl-pf { grid-template-columns: 1fr; gap: 0.75rem; } }
+  .cl .cl-pill-row { display: flex; justify-content: center; margin-top: 0.15rem; }
+  .cl .cl-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--cl-accent-ink);
+    background: var(--cl-accent-soft);
+    border: 1px solid var(--cl-accent-line);
+    border-radius: 999px;
+    padding: 0.45rem 1rem 0.45rem 0.8rem;
+  }
+  .cl .cl-pill svg { width: 1.15rem; height: 1.15rem; flex: none; }
   .cl .cl-pf-card {
     background: var(--cl-surface);
     border: 1.5px solid var(--cl-accent-line);
@@ -498,8 +513,9 @@
     <h1>1 Click Social Media Leads</h1>
     <div class="cl-pf">
       <div class="cl-pf-card cl-pf-problem"><span class="cl-pf-k">The problem</span><p>Ever spot someone on social media you want to reach out to, but turning their profile into a lead feels like too much work?</p></div>
-      <div class="cl-pf-card cl-pf-fix"><span class="cl-pf-k">The fix</span><p>The Creator Lead Generator Shortcut <strong>captures leads in one click.</strong> Go from their profile to a Google Sheet as you browse. Works on Instagram, TikTok, YouTube, Threads, or X on iPhone and Mac.</p></div>
+      <div class="cl-pf-card cl-pf-fix"><span class="cl-pf-k">The fix</span><p>The Creator Lead Generator Shortcut <strong>captures leads in one click.</strong> Go from their profile to a Google Sheet as you browse.</p></div>
     </div>
+    <div class="cl-pill-row"><span class="cl-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="12.5" height="8.5" rx="1.5" fill="none"/><path d="M1 16.5h15.5" fill="none"/><rect x="17" y="7.5" width="6" height="11.5" rx="1.6" fill="none"/><path d="M19.3 16.6h1.4" fill="none"/></svg>Works across platforms on iPhone and Mac</span></div>
     <ol class="cl-flow">
       <li>
         <span class="cl-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4" fill="none"/><path d="M4 20c1.5-4 4.4-6 8-6s6.5 2 8 6" fill="none"/></svg></span>
